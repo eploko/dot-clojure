@@ -1,0 +1,36 @@
+;; The deps.edn file describes the information needed to build a classpath.
+;; Source: https://github.com/eploko/clojure-deps-edn
+;;
+;; deps.edn configuration is a combination of
+;; - install-level (latest Clojure version at install time)
+;; - user level - $HOME/.clojure/deps.edn
+;; - project level - deps.edn in root of project
+;;
+;; For all attributes other than :paths, these config files are merged left to right.
+;; Only the last :paths is kept and others are dropped.
+;; In an :alias, only the last :main-opts is kept and others are dropped.
+
+{
+ ;; Default Paths
+ ;; Directories to include in the classpath to run the application
+ ;; Development only paths should be defined in aliases, eg. :env/dev
+ ;; Project deps.edn file superceeds this setting
+ :paths ["src"]
+
+ ;; Main dependencies
+ :deps
+ ;; Clojure standard library
+ {org.clojure/clojure {:mvn/version "1.10.2"}}
+
+ :aliases
+ {
+  :env/dev
+  {:extra-paths ["dev"]}
+
+  :project/new
+  {:replace-deps {seancorfield/clj-new {:mvn/version "1.1.234"}}
+   :exec-fn      clj-new/create
+   :exec-args    {:template lib :name practicalli/playground}
+   :main-opts    ["-m" "clj-new.create"]}
+  
+  }}

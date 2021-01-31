@@ -6,7 +6,7 @@ A no bullsh*t user level configuration for Clojure CLI tools heavily inspired by
 
 ### `:env/dev`
 
-Include `dev` directory on the class path. Supports the use of `dev/user.clj` to [configure REPL startup](http://practicalli.github.io/clojure/clojure-tools/configure-repl-startup.html).
+Include `dev` directory on the class path. Supports the use of `dev/user.clj` to [configure REPL startup](https://practicalli.github.io/clojure/clojure-tools/projects/configure-repl-startup.html).
 
 ### `:env/test`
 

@@ -1,6 +1,6 @@
 # ~/.clojure/
 
-My user level configuration for Clojure CLI tools heavily inspired by [Sean Corfield's `deps.edn`](https://github.com/seancorfield/dot-clojure) and [Practicalli deps.edn](https://github.com/practicalli/clojure-deps-edn).
+A no bullsh*t user level configuration for Clojure CLI tools heavily inspired by [Sean Corfield's `deps.edn`](https://github.com/seancorfield/dot-clojure) and [Practicalli `deps.edn`](https://github.com/practicalli/clojure-deps-edn).
 
 # Aliases
 

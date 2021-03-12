@@ -1,5 +1,5 @@
 ;; The deps.edn file describes the information needed to build a classpath.
-;; Source: https://github.com/eploko/clojure-deps-edn
+;; Source: https://github.com/eploko/dot-clojure
 ;;
 ;; deps.edn configuration is a combination of
 ;; - install-level (latest Clojure version at install time)
@@ -20,7 +20,7 @@
  ;; Main dependencies
  :deps
  ;; Clojure standard library
- {org.clojure/clojure {:mvn/version "1.10.2"}}
+ {org.clojure/clojure {:mvn/version "1.10.3"}}
 
  :aliases
  {
@@ -42,10 +42,9 @@
    :replace-deps  {antq/antq {:mvn/version "0.10.2"}}
    :main-opts     ["-m" "antq.core"]}
 
-  :repl
-  {:extra-deps {vlaaad/reveal                 {:mvn/version "1.3.194"}
-                nrepl/nrepl                   {:mvn/version "0.8.3"}
-                cider/cider-nrepl             {:mvn/version "0.25.8"}
-                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.0"}}
+  :repl/cider
+  {:extra-deps {nrepl/nrepl                   {:mvn/version "0.8.3"}
+                cider/cider-nrepl             {:mvn/version "0.25.9"}
+                refactor-nrepl/refactor-nrepl {:mvn/version "2.5.1"}}
    :main-opts  ["-m" "nrepl.cmdline"
-                "--middleware" "[refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware,vlaaad.reveal.nrepl/middleware]"]}}}
+                "--middleware" "[refactor-nrepl.middleware/wrap-refactor,cider.nrepl/cider-middleware]"]}}}

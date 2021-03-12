@@ -34,7 +34,7 @@ Report project dependencies that have newer versions available:
 
     cd project-directory && clojure -M:project/outdated
     
-### `:repl`
+### `:repl/cider`
 
 Reveal REPL with nrepl server and Emacs CIDER specific middleware. Use with `M-x cider-connect-clj` in Emacs.
 
